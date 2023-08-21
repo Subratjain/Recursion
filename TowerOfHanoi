@@ -1,0 +1,15 @@
+public class Main{
+    public void towerofhanoi(int n,char s,char d,char h){
+        if(n<=0)
+        return;
+        else{
+            towerofhanoi(n-1,s,h,d);
+            System.out.println("Disk "+n+" move from "+s+"to "+d);
+            towerofhanoi(n-1,h,d,s);
+        }
+    }
+    public static void main(String args[]){
+        Main obj=new Main();
+        obj.towerofhanoi(3,'A','B','C');
+    }
+}
